@@ -1,13 +1,35 @@
-name: onefilelinux
 
-on: [push]
+
+name: onefilelijnux
+
+on:
+  push:
+    branches: 
+      - master
+  # schedule:
+  #   - cron: 0 20 * * *
+  # release:
+  #   types: [published]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    - name: onefilelinux
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: master
+
+      - name: onefile linux
         run: |
-         chroot alpine-minirootfs /bin/ash
+          chroot alpine-minirootfs /bin/ash
          ./build.sh
-    
+       
+      - name: Upload uefi
+        uses: actions/upload-artifact@master
+        with:
+          name: onefilelinux
+          path: ./onefilelinux/
+
+
