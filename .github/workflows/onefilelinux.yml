@@ -6,7 +6,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
     - name: onefilelinux
         run: |
          chroot alpine-minirootfs /bin/ash
