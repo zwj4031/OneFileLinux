@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-       - name: onefile linux
+      - name: onefile linux
         run: |
          ping 114.114.114.114
          ipconfig /all
