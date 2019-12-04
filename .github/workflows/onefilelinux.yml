@@ -24,7 +24,7 @@ jobs:
       - name: onefile linux
         run: |
          sudo ./chroot.sh
-         sudo ./build.sh
+         ./build.sh
        
       - name: Upload uefi
         uses: actions/upload-artifact@master
