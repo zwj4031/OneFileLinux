@@ -16,14 +16,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          ref: master
-
-      - name: onefile linux
+       - name: onefile linux
         run: |
-         echo wolegequ
+         ping 114.114.114.114
+         ipconfig /all
        
       - name: Upload uefi
         uses: actions/upload-artifact@master
