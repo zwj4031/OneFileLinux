@@ -23,7 +23,7 @@ jobs:
 
       - name: onefile linux
         run: |
-          chroot alpine-minirootfs /bin/ash
+         chroot alpine-minirootfs /bin/ash
          ./build.sh
        
       - name: Upload uefi
