@@ -23,7 +23,7 @@ jobs:
 
       - name: onefile linux
         run: |
-         mknod -m 600 alpine-minirootfs/dev/console c 5 1 
+         sudo mknod -m 600 alpine-minirootfs/dev/console c 5 1 
          sudo chroot alpine-minirootfs /bin/ash
          sudo ./build.sh
        
